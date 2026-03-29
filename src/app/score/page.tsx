@@ -64,8 +64,16 @@ function ScoreResults() {
 
       const lat = parseFloat(geoData[0].lat);
       const lng = parseFloat(geoData[0].lon);
-      const displayName = geoData[0].display_name;
-      const neighborhood = geoData[0].address?.suburb || geoData[0].address?.neighbourhood || "San Francisco";
+      const addr = geoData[0].address || {};
+      const neighborhood = addr.suburb || addr.neighbourhood || addr.quarter || "San Francisco";
+      // Build a clean short address from Nominatim parts
+      const parts: string[] = [];
+      if (addr.house_number && addr.road) parts.push(`${addr.house_number} ${addr.road}`);
+      else if (addr.road) parts.push(addr.road);
+      else if (geoData[0].name) parts.push(geoData[0].name);
+      parts.push(neighborhood);
+      parts.push("SF");
+      const displayName = parts.join(", ");
 
       // Step 2: Get elevation via USGS (client-side)
       let elevation = 0;
