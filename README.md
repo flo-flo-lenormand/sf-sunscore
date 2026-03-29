@@ -1,6 +1,8 @@
 # Sun Score
 
-A 0-100 climate score for every address in San Francisco. Based on satellite solar radiation, fog frequency, wind exposure, temperature stability, and 10 years of weather data.
+**Live site: [sf-sunscore.vercel.app](https://sf-sunscore.vercel.app)**
+
+A 0-100 sunshine score for every neighborhood in San Francisco. Based on satellite solar radiation, fog frequency, wind exposure, temperature stability, and 10 years of weather data.
 
 **Think Walk Score, but for sunshine.**
 
@@ -22,7 +24,7 @@ The score weights five components:
 ## Quick Start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/sunscore.git
+git clone https://github.com/flo-flo-lenormand/sf-sunscore.git
 cd sunscore
 npm install
 npm run dev
@@ -51,7 +53,7 @@ python3 scripts/fetch_nrel_data.py
 src/
   app/
     page.tsx                    # Landing page
-    map/page.tsx                # Interactive SVG neighborhood map
+    map/page.tsx                # Interactive Leaflet/OpenStreetMap neighborhood map
     score/page.tsx              # Address score lookup (client-side)
     rankings/page.tsx           # Neighborhood rankings
     methodology/page.tsx        # Full methodology documentation
@@ -65,7 +67,7 @@ src/
     satellite-data.ts           # NREL NSRDB solar radiation (20 calibration points)
     noaa-stations.ts            # 8 Bay Area ASOS stations + IDW interpolation
     solar.ts                    # NREL Solar Position Algorithm
-    neighborhoods.ts            # 20 SF neighborhoods with polygons
+    neighborhoods.ts            # 30 SF neighborhoods with polygons
     data.ts                     # Static neighborhood ranking data
   components/
     SearchBar.tsx               # Address search with geocoding
