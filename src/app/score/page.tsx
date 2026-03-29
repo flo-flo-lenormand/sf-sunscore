@@ -173,11 +173,11 @@ function ScoreResults() {
 
               <div className="grid grid-cols-3 gap-4 mb-6">
                 <div className="bg-gray-50 rounded-xl p-3">
-                  <div className="text-xs text-gray-400 mb-1">Annual Sun Hours</div>
-                  <div className="text-lg font-bold text-gray-900">{result.annualSunHours.toLocaleString()}</div>
+                  <div className="text-xs text-gray-400 mb-1">Avg Daily Sun</div>
+                  <div className="text-lg font-bold text-gray-900">{(result.annualSunHours / 365).toFixed(1)} hrs</div>
                 </div>
                 <div className="bg-gray-50 rounded-xl p-3">
-                  <div className="text-xs text-gray-400 mb-1">Fog Days/Year</div>
+                  <div className="text-xs text-gray-400 mb-1">Foggy Days/Year</div>
                   <div className="text-lg font-bold text-gray-900">{result.fogDaysPerYear}</div>
                 </div>
                 <div className="bg-gray-50 rounded-xl p-3">
