@@ -15,7 +15,7 @@ export default function ApiDocsPage() {
       <section className="mb-10">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Base URL</h2>
         <div className="bg-gray-900 rounded-xl p-4 font-mono text-sm text-amber-400">
-          http://localhost:3000/api
+          https://sf-sunscore.vercel.app/api
         </div>
         <p className="text-xs text-gray-400 mt-2">Replace with your deployed domain when hosting publicly.</p>
       </section>
@@ -83,7 +83,7 @@ export default function ApiDocsPage() {
 
             <h4 className="font-semibold text-gray-900 text-sm mb-2">Example Request</h4>
             <div className="bg-gray-900 rounded-xl p-4 font-mono text-sm text-gray-300 overflow-x-auto mb-4">
-              <pre>{`curl "http://localhost:3000/api/compute?lat=37.7599&lng=-122.4148&elevation=25"`}</pre>
+              <pre>{`curl "https://sf-sunscore.vercel.app/api/compute?lat=37.7599&lng=-122.4148&elevation=25"`}</pre>
             </div>
 
             <h4 className="font-semibold text-gray-900 text-sm mb-2">Example Response</h4>
@@ -135,7 +135,7 @@ export default function ApiDocsPage() {
 
             <h4 className="font-semibold text-gray-900 text-sm mb-2">Example Request</h4>
             <div className="bg-gray-900 rounded-xl p-4 font-mono text-sm text-gray-300 overflow-x-auto mb-4">
-              <pre>{`curl "http://localhost:3000/api/neighborhoods"`}</pre>
+              <pre>{`curl "https://sf-sunscore.vercel.app/api/neighborhoods"`}</pre>
             </div>
 
             <h4 className="font-semibold text-gray-900 text-sm mb-2">Example Response</h4>
@@ -168,7 +168,7 @@ export default function ApiDocsPage() {
           No API keys required for the core scoring engine - all data is bundled.
         </p>
         <div className="bg-gray-900 rounded-xl p-4 font-mono text-sm text-gray-300 overflow-x-auto">
-          <pre>{`git clone https://github.com/YOUR_USERNAME/sunscore.git
+          <pre>{`git clone https://github.com/flo-flo-lenormand/sf-sunscore.git
 cd sunscore && npm install && npm run dev`}</pre>
         </div>
       </section>

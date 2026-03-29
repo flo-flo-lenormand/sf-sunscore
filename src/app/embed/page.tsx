@@ -8,7 +8,7 @@ export default function EmbedPage() {
     <div className="max-w-3xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">Embed Sun Score</h1>
       <p className="text-gray-500 mb-10 text-lg">
-        Add climate intelligence to your website or real estate listings. Free and open source.
+        Add Sun Score to your website or blog. Free and open source.
       </p>
 
       {/* Preview */}
@@ -51,10 +51,10 @@ export default function EmbedPage() {
           {/* Option 1: iframe */}
           <div className="bg-white border border-gray-100 rounded-xl p-6">
             <h3 className="font-bold text-gray-900 mb-1">Option 1: iframe Embed</h3>
-            <p className="text-sm text-gray-500 mb-3">Simplest integration. Drop this into any HTML page. Replace YOUR_DOMAIN with wherever you deploy Sun Score.</p>
+            <p className="text-sm text-gray-500 mb-3">Simplest integration. Drop this into any HTML page. Replace sf-sunscore.vercel.app with wherever you deploy Sun Score.</p>
             <div className="bg-gray-900 rounded-xl p-4 text-sm font-mono text-gray-300 overflow-x-auto">
               <pre>{`<iframe
-  src="https://YOUR_DOMAIN/widget?address=850+Guerrero+St,+SF"
+  src="https://sf-sunscore.vercel.app/widget?address=850+Guerrero+St,+SF"
   width="320"
   height="180"
   frameborder="0"
@@ -89,7 +89,7 @@ export default function EmbedPage() {
             <h3 className="font-bold text-gray-900 mb-1">Option 3: Self-Host</h3>
             <p className="text-sm text-gray-500 mb-3">Sun Score is open source. Fork, customize, and deploy your own instance.</p>
             <div className="bg-gray-900 rounded-xl p-4 text-sm font-mono text-gray-300 overflow-x-auto">
-              <pre>{`git clone https://github.com/YOUR_USERNAME/sunscore.git
+              <pre>{`git clone https://github.com/flo-flo-lenormand/sf-sunscore.git
 cd sunscore
 npm install
 npm run build
